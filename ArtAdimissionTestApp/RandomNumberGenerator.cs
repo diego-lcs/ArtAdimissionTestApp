@@ -47,10 +47,10 @@ namespace ArtAdimissionTestApp
         {
             Dictionary<int, int> testNumbers = new Dictionary<int, int> {
                 {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}
-            };
+            }; // Diccionario que almaceana el número de sucesos de cada número
             for (int i = 0; i < test; i++)
             {
-                testNumbers[GenerateRandomNumber()] += 1;
+                testNumbers[GenerateRandomNumber()] += 1; // se incrementa en uno cada suceso
             }
             string result = String.Format($"Prueba generador de números Aleatorios.\nMuestras:{test}\n");
             result += "-----------------------------------------------------------------------------\n";
