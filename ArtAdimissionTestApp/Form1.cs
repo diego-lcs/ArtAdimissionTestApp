@@ -18,25 +18,41 @@ namespace ArtAdimissionTestApp
             InitializeComponent();
         }
 
+
+
+       
         Random random = new Random();
+        /// <summary>
+        /// Funcion que genera un número uniformemente aleatorio entre 1-5, usado por rateRandom1To7()
+        /// </summary>
+        /// <returns>Un valor entero aleatorio entre 1 y 5</returns>   
         int GenerateRandom1To5()
         {           
             return random.Next(1, 6);
         }
 
+        /// <summary>
+        /// Funcion que genera un numero aleatorio entre 1-7 haciendo uso de función que genera número aleatorio uniforme entre 1 y 5 (GenerateRandom1To5())
+        /// </summary>
+        /// <returns>Un valor entero aleatorio entre 1 y 7</returns>
         int GenerateRandom1To7()
         {
-            int numberOfCalls = (int)callNumberNumericUpDown.Value;
+            int numberOfCalls = (int)callNumberNumericUpDown.Value; // Se toma esta info del entorno gráfico, para analizar valor óptimo
             int acumNumber = 0;
             for(int i = 0; i < numberOfCalls; i++)
                 acumNumber += GenerateRandom1To5();            
             return (acumNumber % 7) + 1;
         }
 
+        /// <summary>
+        /// Función para probar GenerateRandom1To7()
+        /// </summary>
+        /// <param name="test"> Número de repeticiones para probar la función</param>
+        /// <returns> Un string con el reoporte del resultado de la prueba</returns>
         public string RandonNumberTest(int test = 100)
         {
             Dictionary<int, int> testNumbers = new Dictionary<int, int> {
-                { 0,0}, {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}
+                {1,0}, {2,0}, {3,0}, {4,0}, {5,0}, {6,0}, {7,0}
             }; // Diccionario que almacena el número de sucesos de cada número
             for (int i = 0; i < test; i++)
             {
