@@ -35,6 +35,9 @@
             this.testNumberTextBox = new System.Windows.Forms.TextBox();
             this.testLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.callNumberNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.callNumberNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // generateNumberButton
@@ -113,12 +116,49 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "El porcentaje de cada número debería estar en torno al 14.28%";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(159, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "N° de llamados a Gen1To5";
+            // 
+            // callNumberNumericUpDown
+            // 
+            this.callNumberNumericUpDown.BackColor = System.Drawing.SystemColors.WindowText;
+            this.callNumberNumericUpDown.ForeColor = System.Drawing.SystemColors.Window;
+            this.callNumberNumericUpDown.Location = new System.Drawing.Point(195, 143);
+            this.callNumberNumericUpDown.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.callNumberNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.callNumberNumericUpDown.Name = "callNumberNumericUpDown";
+            this.callNumberNumericUpDown.Size = new System.Drawing.Size(40, 20);
+            this.callNumberNumericUpDown.TabIndex = 8;
+            this.callNumberNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.callNumberNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // artTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(560, 291);
+            this.Controls.Add(this.callNumberNumericUpDown);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.testLabel);
             this.Controls.Add(this.testNumberTextBox);
@@ -130,6 +170,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "artTestForm";
             this.Text = "ART TEST";
+            ((System.ComponentModel.ISupportInitialize)(this.callNumberNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +185,8 @@
         private System.Windows.Forms.TextBox testNumberTextBox;
         private System.Windows.Forms.Label testLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown callNumberNumericUpDown;
     }
 }
 
