@@ -1,6 +1,6 @@
 ﻿namespace ArtAdimissionTestApp
 {
-    partial class artTestForm
+    partial class ArtTestForm
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -146,12 +146,12 @@
             this.callNumberNumericUpDown.TabIndex = 8;
             this.callNumberNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.callNumberNumericUpDown.Value = new decimal(new int[] {
-            1,
+            7,
             0,
             0,
             0});
             // 
-            // artTestForm
+            // ArtTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,7 +168,7 @@
             this.Controls.Add(this.generateNumberButton);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "artTestForm";
+            this.Name = "ArtTestForm";
             this.Text = "ART TEST";
             ((System.ComponentModel.ISupportInitialize)(this.callNumberNumericUpDown)).EndInit();
             this.ResumeLayout(false);

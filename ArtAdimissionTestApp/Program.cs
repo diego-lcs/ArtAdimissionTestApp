@@ -16,8 +16,13 @@ namespace ArtAdimissionTestApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new artTestForm());
+            ArtTestForm artTestForm = new ArtTestForm();
+            RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
+            ArtTestController artTestController = new ArtTestController(artTestForm, randomNumberGenerator);
+            artTestController.Connect();
+            Application.Run(artTestForm);    
             
-        }
+        }     
+
     }
 }
